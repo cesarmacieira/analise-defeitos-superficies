@@ -16,6 +16,5 @@ _ood_cache/
 
 gc10det_cls.pt
 gc10det_cls_best.pt
-gc10det_cls_ood.pt
 yolo26n.pt
 yolov8l.pt
