@@ -1,0 +1,34 @@
+{
+  "model_version": "ood_v1",
+  "num_classes": 11,
+  "class_names": [
+    "punching_hole",
+    "welding_line",
+    "crescent_gap",
+    "water_spot",
+    "oil_spot",
+    "silk_spot",
+    "inclusion",
+    "rolled_pit",
+    "crease",
+    "waist_folding",
+    "negative"
+  ],
+  "ood_class_idx": 10,
+  "ood_class_name": "negative",
+  "thresholds": {
+    "punching_hole": 0.45,
+    "welding_line": 0.45,
+    "crescent_gap": 0.5,
+    "water_spot": 0.45,
+    "oil_spot": 0.2,
+    "silk_spot": 0.6,
+    "inclusion": 0.35,
+    "rolled_pit": 0.65,
+    "crease": 0.9,
+    "waist_folding": 0.2,
+    "negative": 0.2
+  },
+  "ood_threshold": 0.2,
+  "description": "Se prob[negative] >= ood_threshold, rejeitar como fora do domínio. Para cada classe de defeito, usar o limiar em 'thresholds'."
+}
