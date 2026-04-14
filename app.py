@@ -213,13 +213,20 @@ META_PATH = _find_model('detection_metadata.json')
 # ─────────────────────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_yolo():
+    st.write("BASE_DIR:", BASE_DIR)
+    st.write("YOLO_PATH:", YOLO_PATH)
+    st.write("Arquivos na pasta:", [p.name for p in BASE_DIR.iterdir()])
+
     if YOLO_PATH is None:
-        return None, 'yolo_detector.pt não encontrado'
+        return None, "yolo_detector.pt não encontrado"
+
     try:
         from ultralytics import YOLO
         model = YOLO(str(YOLO_PATH))
+        st.success("YOLO carregado com sucesso")
         return model, None
     except Exception as e:
+        st.exception(e)
         return None, str(e)
 
 
