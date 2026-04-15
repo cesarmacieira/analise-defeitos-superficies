@@ -14,7 +14,9 @@ from pathlib import Path
 import streamlit as st
 import torch
 from PIL import Image, ImageDraw, ImageFont
-
+import os
+os.environ["OPENCV_IO_ENABLE_OPENEXR"] = "1"
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Configuração da página
