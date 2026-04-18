@@ -18,3 +18,4 @@ gc10det_cls.pt
 gc10det_cls_best.pt
 yolo26n.pt
 yolov8l.pt
+yolo_dataset
