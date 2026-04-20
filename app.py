@@ -611,10 +611,9 @@ with aba_info:
 
 # ── Aba Exemplos ──────────────────────────────────────────────────────────────
 with aba_ex_imagens:
+    st.caption("Faça download e envie na aba **Análise** para testar a detecção em vídeo.")
+
     st.markdown("### Imagens de exemplo")
-    st.caption("**ex1.jpg** — Linha de Solda (welding_line)  |  "
-        "**ex2.jpg** — Fora do domínio (elefantes — deve ser rejeitado)  |  "
-        "**ex3.jpg** — Puncionamento (punching_hole)")
     exemplos = [("Linha de Solda", BASE_DIR / "ex1.jpg"), ("Fora do domínio", BASE_DIR / "ex2.jpg"),
         ("Puncionamento", BASE_DIR / "ex3.jpg")]
     cols = st.columns(3)
@@ -629,8 +628,6 @@ with aba_ex_imagens:
                 st.warning(f"{path.name} não encontrada.")
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown("### Vídeos de exemplo")
-    st.caption("Faça download e envie na aba **Análise** para testar a detecção em vídeo.")
-
     exemplos_video = [
         ("Fora do domínio", BASE_DIR / "ex_video1_new.mp4"),
         ("Linha de Solda",  BASE_DIR / "ex_video2_new.mp4"),
