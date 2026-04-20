@@ -611,8 +611,7 @@ with aba_info:
 
 # ── Aba Exemplos ──────────────────────────────────────────────────────────────
 with aba_ex_imagens:
-    st.caption("Faça download e envie na aba **Análise** para testar a detecção em vídeo.")
-
+    st.caption("Faça download e envie na aba **Análise** para testar a detecção.")
     st.markdown("### Imagens de exemplo")
     exemplos = [("Linha de Solda", BASE_DIR / "ex1.jpg"), ("Fora do domínio", BASE_DIR / "ex2.jpg"),
         ("Puncionamento", BASE_DIR / "ex3.jpg")]
@@ -627,12 +626,10 @@ with aba_ex_imagens:
             else:
                 st.warning(f"{path.name} não encontrada.")
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+
     st.markdown("### Vídeos de exemplo")
-    exemplos_video = [
-        ("Fora do domínio", BASE_DIR / "ex_video1_new.mp4"),
-        ("Linha de Solda",  BASE_DIR / "ex_video2_new.mp4"),
-        ("Dobra",           BASE_DIR / "ex_video3_new.mp4"),
-    ]
+    exemplos_video = [("Fora do domínio", BASE_DIR / "ex_video1.mp4"), ("Linha de Solda", BASE_DIR / "ex_video2.mp4"),
+        ("Dobra", BASE_DIR / "ex_video3.mp4")]
     cols_v = st.columns(3)
     for i, (label, path) in enumerate(exemplos_video):
         with cols_v[i]:

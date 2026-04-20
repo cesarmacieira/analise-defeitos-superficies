@@ -8,12 +8,6 @@ __pycache__/
 runs/
 _ood_cache/
 
-*.ipynb
-*.png
-*.jpg
-*.jpeg
-*.bmp
-
 gc10det_cls.pt
 gc10det_cls_best.pt
 yolo26n.pt
